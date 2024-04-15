@@ -89,12 +89,12 @@
           "latitude": 654321,
           "accuracy": 10
         },
-        "message": "This will be a PIC from Google Drive",
+        "message": "This will be a PIC from GitHub",
         "content": {
           "type": "picture",
-          "data": "https://drive.google.com/file/d/1VyT9_e4IHI10Yf4SYcIgpjJZ2UvZm2ku/view?usp=sharing"
+          "data": "https://solitarydreame.github.io/myLibrary/lapozgatos.jpg"
         },
-        "code": "GDP123"
+        "code": "GHP123"
       },
       {
         "location": {
@@ -102,12 +102,12 @@
           "latitude": 654321,
           "accuracy": 10
         },
-        "message": "This will be a VID from Google Drive",
+        "message": "This will be a VID from GitHub",
         "content": {
           "type": "video",
-          "data": "https://drive.google.com/file/d/182GGTxcPKl1eIdx0jdcn8C7eTgZV3nxQ/view?usp=sharing"
+          "data": "https://solitarydreame.github.io/myLibrary/video.mp4"
         },
-        "code": "GDV123"
+        "code": "GHV123"
       },
       {
         "location": {
