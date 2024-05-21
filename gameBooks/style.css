@@ -1,0 +1,45 @@
+body {
+    overflow-x: hidden;
+    margin: 0;
+    background-color: burlywood;
+}
+nav {
+    position: fixed;
+    top: 0;
+    width: 99vw;
+    box-sizing: content-box;
+    padding: 10px;
+    background-color: darkgrey;
+    opacity: 0.5;
+}
+nav a {
+    padding-right: 10px;
+}
+nav a:last-child {
+    float: right;
+}
+header {
+    margin: 50px;
+    text-align: center;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+article {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+article a {
+    display: inline-block;
+    width: 150px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: 10px;
+    text-align: center;
+}
+img {
+    width: inherit;
+}
+article a p {
+    margin: 5px;
+}
