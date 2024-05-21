@@ -92,7 +92,7 @@
         "message": "This will be a PIC from GitHub",
         "content": {
           "type": "picture",
-          "data": "https://solitarydreame.github.io/myLibrary/lapozgatos.jpg"
+          "data": "https://solitarydreame.github.io/myLibrary/resources/lapozgatos.jpg"
         },
         "code": "GHP123"
       },
@@ -105,7 +105,7 @@
         "message": "This will be a VID from GitHub",
         "content": {
           "type": "video",
-          "data": "https://solitarydreame.github.io/myLibrary/video.mp4"
+          "data": "https://solitarydreame.github.io/myLibrary/resources/video.mp4"
         },
         "code": "GHV123"
       },
