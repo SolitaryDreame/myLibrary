@@ -1,0 +1,130 @@
+{
+    "head": {
+      "type": "linear",
+      "description": "This file is created to test the application. Stored externally :D",
+      "name": "JSONforTEST"
+    },
+    "body": [
+      {
+        "location": {
+          "longitude": 123456,
+          "latitude": 654321,
+          "accuracy": 10
+        },
+        "message": "This will be a TXT",
+        "content": {
+          "type": "text",
+          "data": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam, massa non maximus auctor, lectus arcu vehicula massa, in imperdiet mauris lectus et nulla. Praesent dignissim metus eros, eget maximus felis iaculis ut. Maecenas sed dignissim elit. Vivamus lectus tortor, finibus a libero nec, laoreet ullamcorper diam. Maecenas consectetur eget metus et elementum. Curabitur vehicula, lacus ut bibendum laoreet, diam tellus molestie purus, non congue tortor nibh vitae velit. Quisque tempus, massa sed convallis aliquet, lorem ipsum ultrices massa, et efficitur nunc sem posuere tellus. Praesent eget commodo dui. Quisque non ex felis. Maecenas elementum porta arcu, ac iaculis ante tincidunt convallis. Aliquam non sem facilisis nulla tincidunt posuere vel a felis. Nunc consequat justo lorem, non vestibulum odio sodales id."
+        },
+        "code": "TXT123"
+      },
+      {
+        "location": {
+          "longitude": 123456,
+          "latitude": 654321,
+          "accuracy": 10
+        },
+        "message": "This will be a PIC",
+        "content": {
+          "type": "picture",
+          "data": "https://picsum.photos/600/400"
+        },
+        "code": "PIC123"
+      },
+      {
+        "location": {
+          "longitude": 123456,
+          "latitude": 654321,
+          "accuracy": 10
+        },
+        "message": "This will be a VID",
+        "content": {
+          "type": "video",
+          "data": "https://youtu.be/EngW7tLk6R8"
+        },
+        "code": "VID123"
+      },
+      {
+        "location": {
+          "longitude": 123456,
+          "latitude": 654321,
+          "accuracy": 10
+        },
+        "message": "This will be a SPEC - Embed",
+        "content": {
+          "type": "special",
+          "data": "<iframe width='560' height='315' src='https://www.youtube.com/embed/7B74-teYM2g?si=l4L81C73A80Y2MDL' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' referrerpolicy='strict-origin-when-cross-origin' allowfullscreen></iframe>"
+        },
+        "code": "YOU123"
+      },
+      {
+        "location": {
+          "longitude": 123456,
+          "latitude": 654321,
+          "accuracy": 10
+        },
+        "message": "This will be a SPEC - HTML",
+        "content": {
+          "type": "special",
+          "data": "<p style='color: tomato'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc aliquam, massa non maximus auctor, lectus arcu vehicula massa, in imperdiet mauris lectus et nulla. Praesent dignissim metus eros, eget maximus felis iaculis ut. Maecenas sed dignissim elit. Vivamus lectus tortor, finibus a libero nec, laoreet ullamcorper diam.</p>"
+        },
+        "code": "RED123"
+      },
+      {
+        "location": {
+          "longitude": 123456,
+          "latitude": 654321,
+          "accuracy": 10
+        },
+        "message": "This will be a BAD format",
+        "content": {
+          "type": "wrong",
+          "data": "Wrong data type"
+        },
+        "code": "BAD123"
+      },
+      {
+        "location": {
+          "longitude": 123456,
+          "latitude": 654321,
+          "accuracy": 10
+        },
+        "message": "This will be a PIC from GitHub",
+        "content": {
+          "type": "picture",
+          "data": "https://solitarydreame.github.io/myLibrary/lapozgatos.jpg"
+        },
+        "code": "GHP123"
+      },
+      {
+        "location": {
+          "longitude": 123456,
+          "latitude": 654321,
+          "accuracy": 10
+        },
+        "message": "This will be a VID from GitHub",
+        "content": {
+          "type": "video",
+          "data": "https://solitarydreame.github.io/myLibrary/video.mp4"
+        },
+        "code": "GHV123"
+      },
+      {
+        "location": {
+          "longitude": 123456,
+          "latitude": 654321,
+          "accuracy": 10
+        },
+        "message": "Just for +1",
+        "content": {
+          "type": "special",
+          "data": "..."
+        },
+        "code": "123456"
+      }
+    ],
+    "foot": {
+      "creator": "That would be me ;D",
+      "date": "04-10-2024"
+    }
+  }
