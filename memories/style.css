@@ -1,0 +1,210 @@
+/* -------------------- variables -------------------- */
+
+:root {               /* dark  -  light*/
+    --bckgrnd: #FFEBC2; /*2A2442 - FFEBC2*/
+    --txt: #2A2442;     /*FFEBC2 - 2A2442*/
+    --sdbr: #FFE2AD;    /*3A335C - FFE2AD*/
+    --cntnt: #FFE5B4;   /*332B50 - FFE5B4*/
+  }
+  
+  /* -------------------- main content -------------------- */
+  
+  body {
+    display: grid;
+    grid-template-columns: 20% auto 20%;
+    column-gap: 10px;
+    margin: 0px;
+    overflow: hidden;
+    background-color: var(--bckgrnd);
+  }
+  
+  article {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px var(--txt) solid;
+    border-radius: 10px;
+    margin: 10vh;
+    height: 80vh;
+    overflow: auto;
+    background-color: var(--cntnt);
+    color: var(--txt);
+  }
+  
+  article * {
+    margin: 10px;
+  }
+  
+  article button {
+    padding: 10px 20px;
+    border: 1px var(--txt) solid;
+    border-radius: 10px;
+    background-color: var(--cntnt);
+    color: var(--txt);
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  article button:hover {
+    background-color: var(--sdbr);
+  }
+  
+  p {
+    margin: 4px;
+  }
+  
+  img, video, iframe {
+    max-width: 95%;
+    border-radius: 10px;
+  }
+  
+  /* -------------------- sidebars -------------------- */
+  
+  .active {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px var(--txt) solid;
+    height: 100vh;
+    overflow: auto;
+    background-color: var(--sdbr);
+    color: var(--txt);
+  }
+  
+  #history {  
+    border-radius: 0 10px 10px 0;
+  }
+  
+  #settings {
+    border-radius: 10px 0 0 10px;
+  }
+  
+  aside button {
+    margin: 0 auto;
+    border: none;
+    border-radius: 10px;
+    padding: 6px;
+    width: 100%;
+    background-color: var(--sdbr);
+    font-size: 1.17em;
+    font-weight: bold;
+    color: var(--txt);
+    cursor: pointer;
+  }
+  
+  aside button:hover {
+    background-color: var(--cntnt);
+  }
+  
+  .noDisplay {
+    display: none;
+  }
+  
+  aside div {
+    margin: auto 6px 6px;
+    border: 1px var(--txt) solid;
+    border-radius: 10px;
+    background-color: var(--cntnt);
+  }
+  
+  #settings ul {
+    list-style: none;
+    padding: 0 0 0 8%;
+  }
+  
+  #bookmark input {
+    width: min(40%, 70px);
+  }
+  
+  li {
+    padding: 0 0 8px 0;
+  }
+  
+  li a {
+    color: var(--txt);
+    text-decoration: none;
+  }
+  
+  .notFound {
+    text-decoration: line-through;
+    pointer-events: none;
+  }
+  
+  .material-symbols-outlined {
+    font-variation-settings: 
+      'FILL' 0, 'wght' 400, 'GRAD' 0,'opsz' 24;
+  }
+  
+  /* -------------------- checkbox slider -------------------- */
+  
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 30px;
+    height: 17px;
+  }
+  
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--txt);
+    transition: .4s;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 2px;
+    bottom: 2px;
+    background-color: white;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: var(--bckgrnd);
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(13px);
+  }
+  
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+  
+  /* RESPONSIVE */
+  @media screen and (max-width: 820px) {
+    body {
+      display: block;
+      overflow: auto;
+    }
+    article {
+      margin: 5vw;
+      height: 90vh;
+    }
+    .active {
+      height: auto;
+    }
+  }

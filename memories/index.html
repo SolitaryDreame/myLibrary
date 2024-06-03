@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="hu">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Emlékek</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <!-- -------------------- history sidebar -------------------- -->
+
+        <aside id="history" class="">
+            <button onclick="toggleSdbr(`history`)">
+            <span class="material-symbols-outlined">history</span>
+            Történet
+            </button>
+            <ul class="noDisplay"></ul>
+            <div id="summary" class="noDisplay">
+            <p>Információ nem elérhető! Válassz könyvet.</p>
+            </div>
+        </aside>
+        
+        <!-- -------------------- main content -------------------- -->
+        
+        <article>
+            <label for="url">URL: <input id="url" type="text"></label>
+            <button id="startBtn" onclick="getData()">Kezdjük</button>
+        </article>
+        
+        <!-- -------------------- settings sidebar -------------------- -->
+        
+        <aside id="settings" class="">
+            <button onclick="toggleSdbr(`settings`)">
+            <span class="material-symbols-outlined">settings</span>
+            Beállítások
+            </button>
+            <ul class="noDisplay">
+            <li>
+                Sötét Mód: 
+                <label class="switch">
+                <input type="checkbox" id="darkMode" onclick="darkMode()">
+                <span class="slider round"></span>
+                </label>
+            </li>
+            <!--<li>Language: </li>-->
+            <li>
+                <span id="accuracyLabel">Magas pontosság: </span>
+                <label class="switch">
+                <input type="checkbox" id="highAccuracy" onclick="setHighAcc()">
+                <span class="slider round"></span>
+                </label>
+            </li>
+            <li id="bookmark" class="noDisplay">
+                Könyvjelző:
+                <input type="text">
+            </li>
+            <li id="code" class="noDisplay">Kód: <span></span></li>
+            <li id="close" onclick="closer()" style="cursor: pointer">Mentett könyv törlése</li>
+            <li><a href="../index.html">Vissza</a></li>
+            </ul>
+            <div id="details" class="noDisplay">
+            <p>Információ nem elérhető! Válassz könyvet.</p>
+            </div>
+        </aside>
+        
+        <!--
+        Compass icon: 
+        <span class="material-symbols-outlined">explore</span>
+        <span class="material-symbols-outlined">explore_off</span>
+        
+        Arrow icon:
+        <span class="material-symbols-outlined">arrow_circle_up</span>
+        
+        In history:
+        <span class="material-symbols-outlined">schedule</span>
+        -->
+    </body>
+</html>
