@@ -185,6 +185,8 @@ function loadMap(currentpos, targetpos) {
   });
         
   myCircle.setMap(map);
+
+  document.querySelector("#map").innerHTML = map;
 }
 
 document.querySelector("#url").addEventListener("keydown", (e) => {
