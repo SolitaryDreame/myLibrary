@@ -201,7 +201,7 @@ function setHighAcc() {
 
 // -------------------- Bookmark --------------------
 
-function goTo() {
+function goToChapter() {
     let checkCode = document.querySelector("#bookmark input");
     if (checkCode.value.length == 6) {
         for (let j = 0; j < data.body.length; j++) {
