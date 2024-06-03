@@ -7,9 +7,9 @@
     "body": [
       {
         "location": {
-          "longitude": 47.5606785,
+          "longitude": 47.5607785,
           "latitude": 19.086462,
-          "accuracy": 4
+          "accuracy": 15
         },
         "message": "This will be a TXT",
         "content": {
@@ -22,7 +22,7 @@
         "location": {
           "longitude": 47.577995,
           "latitude": 19.089622,
-          "accuracy": 4
+          "accuracy": 10
         },
         "message": "This will be a PIC",
         "content": {
