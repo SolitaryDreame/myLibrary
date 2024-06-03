@@ -59,7 +59,7 @@ function loadHistory(dataJSON) {
     html += `<li>
         <a class="${(i < currentChapter) ? "" : "notFound"}"
         href="javascript:void(0)" onclick="displayChapter(data.body[${i}], this)">
-          Fejezet ${i + 1}
+        ${i + 1}. Fejezet
         </a>
       </li>`;
   }
@@ -201,25 +201,26 @@ function setHighAcc() {
 
 // -------------------- Bookmark --------------------
 
-document.querySelector("#bookmark input").addEventListener("keydown", (e) => {
-  e.target.style.backgroundColor = "#FFFFFF";
-  if (e.target.value.length == 5) {
-    e.target.style.backgroundColor = "#90EE90";
-  }
-  if (e.key === "Enter" && e.target.value.length == 6) {
-    for (let j = 0; j < data.body.length; j++) {
-      if (data.body[j].code == e.target.value) {
-        document.querySelector("#code span").innerHTML = data.body[j].code;
-        currentChapter = j + 1;
-        loadHistory(data);
-        displayChapter(data.body[j]);
-        e.target.value = "";
-        save.progress = data.body[j].code;
-        localStorage.setItem("savedBook", JSON.stringify(save));
-        break;
+function goTo() {
+    let checkCode = document.querySelector("#bookmark input");
+    if (checkCode.value.length == 6) {
+        for (let j = 0; j < data.body.length; j++) {
+          if (data.body[j].code == checkCode.value) {
+            document.querySelector("#code span").innerHTML = data.body[j].code;
+            currentChapter = j + 1;
+            loadHistory(data);
+            displayChapter(data.body[j]);
+            checkCode.value = "";
+            save.progress = data.body[j].code;
+            localStorage.setItem("savedBook", JSON.stringify(save));
+            break;
+          }
+        }
       }
-    }
-  }
+}
+
+document.querySelector("#bookmark input").addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {document.querySelector("#goTo").click();}
 });
 
 // Closer...
