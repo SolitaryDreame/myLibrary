@@ -87,7 +87,9 @@ function letsTrack() {
         } else {
           if (test) {
             page.innerHTML = `<p>${currentData.message}<br>
-              Távolság: ${distance(pos.coords, currentData.location)} méter</p>`;
+              Távolság: ${distance(pos.coords, currentData.location)} méter<br>
+              <div id="map" style="width:900px; height:580px"></div></p>`;
+              loadMap(pos.coords, currentData.location);
           } else {
             page.innerHTML = `<p>${currentData.message}</p>`;
           }
@@ -151,6 +153,38 @@ function distance(center, target, onTarget = false) {
   } else {
     return (center.accuracy + target.accuracy) > d;
   }
+}
+
+function loadMap(currentpos, targetpos) {
+  var mapOptions = {
+    center: new google.maps.LatLng(targetpos.latitude, targetpos.longitude), 
+    zoom: 21, 
+    mapTypeId: google.maps.MapTypeId.HYBRID
+  };
+  var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+
+  var marker1 = new google.maps.Marker({
+    position: new google.maps.LatLng(targetpos.latitude, targetpos.longitude),
+    map: map,
+  });
+  var marker2 = new google.maps.Marker({
+    position: new google.maps.LatLng(currentpos.latitude, currentpos.longitude),
+    map: map,
+  });
+
+  var myCircle = new google.maps.Circle({
+    center: new google.maps.LatLng(targetpos.latitude, targetpos.longitude),
+    radius: targetpos.accuracy,
+  
+    strokeColor: "#B40404",
+    strokeOpacity: 0.6,
+    strokeWeight: 2,
+  
+    fillColor: "#B40404",
+    fillOpacity: 0.4
+  });
+        
+  myCircle.setMap(map);
 }
 
 document.querySelector("#url").addEventListener("keydown", (e) => {
