@@ -46,7 +46,7 @@ function getData() {
     loadHistory(data);
     document.querySelector("#bookmark").classList.toggle("noDisplay");
     document.querySelector("#code").classList.toggle("noDisplay");
-    document.querySelector("#close").innerHTML = "Close Book";
+    document.querySelector("#close").innerHTML = "Könyv bezárása";
     letsTrack();
   }).catch((err) => {
     window.alert(err.message);
