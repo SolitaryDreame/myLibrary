@@ -147,7 +147,7 @@ function displayChapter(chapter, item = null) {
 function distance(center, target, onTarget = false) {
   let x = center.latitude - target.latitude;
   let y = center.longitude - target.longitude;
-  let d = Math.sqrt(x * x + y * y) * 111139;
+  let d = Math.sqrt((x * x) + (y * y)) * 111139;
   if (!onTarget) {
     return d;
   } else {
@@ -158,10 +158,10 @@ function distance(center, target, onTarget = false) {
 function loadMap(currentpos, targetpos) {
   var mapOptions = {
     center: new google.maps.LatLng(targetpos.latitude, targetpos.longitude), 
-    zoom: 21, 
+    zoom: 19, 
     mapTypeId: google.maps.MapTypeId.HYBRID
   };
-  var map = new google.maps.Map(document.getElementById("sample"),mapOptions);
+  var map = new google.maps.Map(document.getElementById("map"),mapOptions);
 
   var marker1 = new google.maps.Marker({
     position: new google.maps.LatLng(targetpos.latitude, targetpos.longitude),
@@ -185,8 +185,6 @@ function loadMap(currentpos, targetpos) {
   });
         
   myCircle.setMap(map);
-
-  document.querySelector("#map").innerHTML = map;
 }
 
 document.querySelector("#url").addEventListener("keydown", (e) => {
