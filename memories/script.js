@@ -4,6 +4,8 @@ var accuracy = false;
 var url, watcher, data, save;
 var currentChapter = 0;
 
+var test = false;
+
 // ------------------------------ onLoad ------------------------------
 
 window.onload = () => {
@@ -22,7 +24,8 @@ function getData() {
   url = document.querySelector("#url").value;
   if (url == "testing") {
     url = "https://solitarydreame.github.io/myLibrary/resources/testingLoc.json";
-  }
+    test = true;
+  } else {test = false;}
   fetch(url).then((resp) => {return resp.json();}).then((json) => {
     data = json;
     document.querySelector("#summary p").innerHTML = data.head.description;
@@ -82,7 +85,12 @@ function letsTrack() {
           currentChapter++;
           loadHistory(data);
         } else {
-          page.innerHTML = `<p>${currentData.message}</p>`;
+          if (test) {
+            page.innerHTML = `<p>${currentData.message}<br>
+              Távolság: ${distance(pos.coords, currentData.location)} méter</p>`;
+          } else {
+            page.innerHTML = `<p>${currentData.message}</p>`;
+          }
         }
       }, (err) => {
         console.log(err.message);
